@@ -3,7 +3,7 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-    content: ["../PortfolioSite/**/*.{cshtml,md,html}"],
+    content: ["../**/*.{cshtml,md,html}"],
     theme: {
         extend: {
             backgroundImage: theme => ({

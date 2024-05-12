@@ -11,7 +11,7 @@ namespace VanillaPlusWebsite
         public static async Task<int> Main(string[] args)
         {
             var currentDirectory = Directory.GetCurrentDirectory();
-            var nodeDirectory = Path.Combine(currentDirectory, "..", "node");
+            var nodeDirectory = Path.Combine(currentDirectory, "node");
             var inputDirectory = Path.Combine(currentDirectory, "input");
 
             CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo("en-US");
