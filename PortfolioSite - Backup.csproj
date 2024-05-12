@@ -16,7 +16,7 @@
     <Folder Include="input\assets\images\Blogs\" />
     <Folder Include="input\assets\images\Projects\" />
     <Folder Include="input\assets\js\" />
-    <Folder Include="input\Shared\Skills\" />
+    <Folder Include="input\Shared\" />
   </ItemGroup>
 
 </Project>
