@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.purple-border-gradient {
+    /* Webkit (Safari/Chrome) syntax */
+    border-image: -webkit-linear-gradient(to bottom right, #391dba, #291586, #855bb7) 1;
+    /* Mozilla Firefox syntax */
+    border-image: -moz-linear-gradient(to bottom right, #391dba, #291586, #855bb7) 1;
+    /* Opera syntax */
+    border-image: -o-linear-gradient(to bottom right, #391dba, #291586, #855bb7) 1;
+    /* Standard syntax */
+    border-image: linear-gradient(to bottom right, #391dba, #291586, #855bb7) 1;
+}
+
