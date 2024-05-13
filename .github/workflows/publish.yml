@@ -2,7 +2,7 @@ name: Statiq Web Deploy
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   workflow_dispatch:
     
 env:
