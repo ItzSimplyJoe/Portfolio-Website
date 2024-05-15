@@ -1,10 +1,10 @@
 {
   "InputPaths": [ "input" ],
   "SiteTitle": "Joe Bostock",
-  "Logo": "/assets/logo.png",
+  "Logo": "/assets/images/logo.png",
   "MirrorResources": true,
   "MarkdownExtensions": [ "bootstrap" ],
-  "Host": "tbc.com",
+  "Host": "joebostock.com",
   "Copyright": "Joe Bostock 2024",
   "IgnoreInvalidXrefs": true,
   "MakeLinksRootRelative": true,
