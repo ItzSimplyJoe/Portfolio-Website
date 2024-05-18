@@ -3,7 +3,11 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-    content: ["../**/*.{cshtml,md,html}"],
+    content: {
+        relative: true,
+        transform: (content) => content.replace(/taos:/g, ''),
+        files: ["../**/*.{cshtml,md,html}"],
+        },
     theme: {
         extend: {
             backgroundImage: theme => ({
@@ -24,5 +28,11 @@ module.exports = {
     plugins: [
         require('@tailwindcss/forms'),
         require('@tailwindcss/typography'),
+        require('taos/plugin'),
+    ],
+    safelist: [
+        '!duration-[0ms]',
+        '!delay-[0ms]',
+        'html.js :where([class*="taos:"]:not(.taos-init))'
     ],
 }

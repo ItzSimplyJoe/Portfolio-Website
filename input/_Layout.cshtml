@@ -8,12 +8,15 @@
     <link rel="icon" href="/assets/images/favicon.ico" />
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script>document.documentElement.classList.add('js')</script>
     <title>Joe Bostock | Portfolio</title>
 </head>
 <body>
     @await Html.PartialAsync("_Navbar")
     @RenderBody()
     @await Html.PartialAsync("_Footer")
+
+<script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="/assets/js/swiper.js"></script>
