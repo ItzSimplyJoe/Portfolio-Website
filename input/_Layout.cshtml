@@ -13,7 +13,20 @@
 </head>
 <body>
     @await Html.PartialAsync("_Navbar")
-    @RenderBody()
+    @if (Document.ContainsKey("Published"))
+    {
+        <main class="flex justify-center p-6 md:p-16 bg-background">
+            <div class="max-w-screen-xl w-full flex justify-start items-center">
+                <article class="prose max-w-none prose-headings:text-white prose-p:text-white prose-p:opacity-85 prose-a:text-purple prose-li:text-white prose-li:opacity-85">
+                    @RenderBody()
+                </article>
+            </div>
+        </main>
+    }
+    else
+    {
+        @RenderBody()
+    }
     @await Html.PartialAsync("_Footer")
 
 <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
