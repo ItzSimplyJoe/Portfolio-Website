@@ -1,6 +1,7 @@
 ---
 Title: "How to get started in software"
 Published: 2024-05-13
+Blog: true
 Tags: ["programming", "language", "first"]
 Image: "/assets/images/programming.jpg"
 Excerpt: "How do I get started in software? Where should I start?"

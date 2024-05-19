@@ -1,6 +1,7 @@
 ---
 Title: "How Do I Make a github readme?"
 Published: 2024-05-13
+Blog: true
 Tags: ["github", "coding", "readme"]
 Image: "/assets/images/apprenticeships.jpg"
 Excerpt: "How do I make the best readme for my project?"
