@@ -15,6 +15,24 @@
     @await Html.PartialAsync("_Navbar")
     @if (Document.ContainsKey("Blog"))
     {
+        <section class="w-full flex justify-center relative bg-navy text-white overflow-x-hidden">
+            <div class="w-full bg-cover bg-no-repeat bg-center flex justify-center p-6 md:px-16 py-12 md:py-32 bg-[url('@Document.GetPath("Image")')]">
+                <div class="absolute inset-0 bg-purple opacity-75"></div>
+                <div class="max-w-screen-xl w-full flex z-20 flex-col mx:flex-row gap-8 md:gap-12">
+                    <div class="justify-content-between flex flex-col gap-8 w-full">
+                        <div class="md:w-2/3 flex flex-col justify-content-between gap-8 xl:w-1/2">
+                            <h1 class="text-2xl md:text-5xl font-bold text-white">@Document.GetTitle()</h1>
+                            <p class="text-white">
+                                @Document.GetString("Excerpt")
+                            </p>
+                            <div class="flex flex-col md:flex-row gap-4">
+                                <span>@Document.GetPublishedDate().ToString("dd MMM yyyy")</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <main class="flex justify-center p-6 md:p-16 bg-background">
             <div class="max-w-screen-xl w-full flex justify-start items-center">
                 <article class="prose max-w-none prose-headings:text-white prose-p:text-white prose-p:opacity-85 prose-a:text-purple prose-li:text-white prose-li:opacity-85">

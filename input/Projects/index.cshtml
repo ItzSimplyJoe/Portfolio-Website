@@ -9,8 +9,8 @@ Order: 2
             <div class="flex flex-col gap-8 w-full text-center md:text-start delay-[300ms] duration-[600ms] taos:translate-x-[-200px] taos:opacity-0" data-taos-offset="400">
                 <h1 class="text-white text-3xl md:text-5xl font-bold">Welcome to <span class="text-purple">My Projects!</span></h1>
                 <p class="text-white text-lg">
-                    Lorem ipsum dolor sit amet. Sed quis harum quo illum enim aut voluptatibus dolor.
-                    Qui deleniti quasi in similique consequatur est unde reiciendis vel totam quia.
+                    Welcome to my projects, below you can find @(Outputs.FromPipeline("Data").FilterSources("Projects/*.yaml").Count()) projects that I have made.
+                    I have more projects on my github which you can find linked <a href="https://www.github.com/itzsimplyjoe" class="text-purple hover:underline hover:underline-offset-2 transition-all duration-500">here</a>.
                 </p>
             </div>
             <img src="/assets/images/Projects/herobg.png" class="md:w-1/2 md:block hidden lg:min-h-96 duration-[600ms] taos:translate-x-[200px] taos:opacity-0" data-taos-offset="400" />
@@ -35,7 +35,7 @@ Order: 2
                 number++;
                 <div class="bg-[#18181a] rounded-lg border border-[#211f29] flex flex-col p-6 gap-8 delay-[@(delay)ms] duration-[600ms] taos:translate-x-[-200px] taos:opacity-0" data-taos-offset="400">
                     <div class="w-full border-2 purple-border-gradient bg-[url('@project.GetPath("Image")')] bg-cover bg-no-repeat bg-center relative h-44">
-                        <a href="@project.GetString("Link")" class="absolute top-2 right-2 flex justify-center items-center bg-background rounded-full p-2">
+                        <a href="@project.GetString("Link")" class="absolute top-2 right-2 flex justify-center items-center bg-background rounded-full p-2 transition-all duration-500 hover:scale-125">
                             <img src="/assets/images/github.svg" class="w-6 h-6" />
                         </a>
                     </div>
