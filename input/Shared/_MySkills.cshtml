@@ -1,7 +1,7 @@
 <section id="skills" class="bg-background w-full flex justify-center items-center p-6 md:p-16 pt-0 md:pt-0">
     <div class="w-full max-w-screen-xl flex justify-center items-center">
         <div class="flex flex-col justify-center items-center w-full gap-12">
-            <div class="flex flex-col gap-2 w-full justify-center items-center delay-[300ms] duration-[600ms] taos:translate-y-[200px] taos:opacity-0" data-taos-offset="300">
+            <div class="flex flex-col gap-2 w-full justify-center items-center md:delay-[300ms] duration-[600ms] taos:translate-y-[200px] taos:opacity-0" data-taos-offset="300">
                 <h6 class="text-pink">Skills</h6>
                 <h2 class="text-4xl text-white font-bold">What Can I Do?</h2>
             </div>
@@ -12,7 +12,7 @@
                 @foreach (var skill in Outputs.FromPipeline("Data").FilterSources("Shared/Skills/*.yaml"))
                 {
                     delay += 200;
-                    <div class="flex flex-col gap-4 justify-center items-center delay-[@(delay)ms] duration-[600ms] taos:[transform:translate3d(-200px,0,0)_scale(0.6)] taos:opacity-0" data-taos-offset="400">
+                    <div class="flex flex-col gap-4 justify-center items-center md:delay-[@(delay)ms] duration-[600ms] taos:[transform:translate3d(-200px,0,0)_scale(0.6)] taos:opacity-0" data-taos-offset="400">
                         <div class="flex justify-center items-center p-4 bg-[#18181a] border-2 border-[#27252e] rounded-lg hover:bg-purple-gradient duration-[400ms] transition-all">
                             <img src="@skill.GetPath("Icon")" />
                         </div>
@@ -26,7 +26,7 @@
 
             <hr class="w-full md:w-1/2 h-0.5 bg-gradient-to-r from-transparent via-white to-transparent mb-8 delay-[300ms] duration-[600ms] taos:scale-[0.6] taos:opacity-0" data-taos-offset="400">
 
-            <div class="w-full justify-center items-center swiper delay-[300ms] duration-[600ms] taos:[transform:translate3d(0,-200px,0)_scale(0.6)] taos:opacity-0" data-taos-offset="500">
+            <div class="w-full justify-center items-center swiper md:delay-[300ms] duration-[600ms] taos:[transform:translate3d(0,-200px,0)_scale(0.6)] taos:opacity-0" data-taos-offset="500">
                 <div class="swiper-wrapper">
                     @foreach (var skill in Outputs.FromPipeline("Assets").FilterSources("Shared/Tech/*.*"))
                     {
