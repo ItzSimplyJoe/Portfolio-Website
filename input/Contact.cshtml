@@ -1,4 +1,56 @@
 @*-
 Title: "Contact"
 -*@
-<p>Contact</p>
+
+<section class="bg-background w-full flex justify-center items-center p-6 md:p-16 pt-0 md:pt-0">
+    <div class="w-full max-w-screen-xl flex justify-center items-center">
+        <div class="flex flex-col justify-center items-center w-full gap-12">
+            <div class="flex flex-col gap-2 w-full justify-center items-center md:duration-[600ms] taos:scale-[0.6] taos:opacity-0" data-taos-offset="400">
+                <h6 class="text-pink">Contact me</h6>
+                <h2 class="text-4xl text-white font-bold">Contact me</h2>
+                <p>Note this form doesnt work yet, as im working on another app to incorporate it into.</p>
+                <hr class="w-full md:w-1/4 mt-10 h-0.5 bg-gradient-to-r from-transparent via-white to-transparent">
+            </div>
+            
+            <form id="contactForm" class="space-y-4 w-full max-w-lg">
+                <div class="flex flex-col">
+                    <label for="name" class="mb-2 font-medium text-white">Name:</label>
+                    <input type="text" id="name" name="name" required class="p-2 border border-gray-300 rounded bg-background text-white" />
+                </div>
+                <div class="flex flex-col">
+                    <label for="email" class="mb-2 font-medium text-white">Email:</label>
+                    <input type="email" id="email" name="email" required class="p-2 border border-gray-300 rounded bg-background text-white" />
+                </div>
+                <div class="flex flex-col">
+                    <label for="message" class="mb-2 font-medium text-white">Message:</label>
+                    <textarea id="message" name="message" required class="p-2 border border-gray-300 rounded bg-background text-white"></textarea>
+                </div>
+                <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        const data = Object.fromEntries(formData.entries());
+
+        fetch('https://example.com/api/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert('Message sent successfully!');
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('There was an error sending your message.');
+        });
+    });
+</script>
